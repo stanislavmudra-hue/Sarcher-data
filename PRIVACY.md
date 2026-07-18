@@ -73,7 +73,7 @@ Jelikož aplikace neukládá žádné osobní údaje, není co exportovat ani ma
 Pro údaje zpracovávané společností Google (reklamy) využijte nástroje
 Google. S dotazy se obraťte na správce aplikace:
 
-**Stanislav Mudra**, e-mail: stanislavmudra@gmail.com
+**Stanislav Mudra**, e-mail: stamu.apps@gmail.com
 
 ## Změny
 
