@@ -43,6 +43,15 @@ V zemích EU/EHP se před zobrazením reklam zobrazí **formulář souhlasu
 (GDPR)**, kde můžete personalizaci reklam odmítnout. Volbu lze později
 změnit smazáním dat aplikace.
 
+## Hlasování o aktuálnosti míst
+
+Aplikace umožňuje anonymně hlasovat, zda je místo stále v provozu.
+Odesílá se pouze **souhrnný hlas** (+1 k počítadlu daného místa) do služby
+**Google Firebase (Firestore)** provozované správcem aplikace; nepřenáší se
+žádné osobní údaje ani identifikátory uživatele. Volitelné hlášení
+zaniklého místa vytváří veřejnou anonymní poznámku v projektu
+OpenStreetMap (viz openstreetmap.org).
+
 ## Data míst
 
 Databáze míst pochází z projektu **OpenStreetMap**
