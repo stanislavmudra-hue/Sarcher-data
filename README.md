@@ -1,23 +1,24 @@
-# Sarcher – datový kanál
+﻿# Sarcher â€“ datovĂ˝ kanĂˇl
 
-Tento repozitář slouží jako **datový kanál aplikace Sarcher** (vyhledávač míst v okolí).
+Tento repozitĂˇĹ™ slouĹľĂ­ jako **datovĂ˝ kanĂˇl aplikace Okolník** (vyhledĂˇvaÄŤ mĂ­st v okolĂ­).
 
-Aplikace si při každém spuštění stáhne soubor [`live.json`](live.json) a použije z něj:
+Aplikace si pĹ™i kaĹľdĂ©m spuĹˇtÄ›nĂ­ stĂˇhne soubor [`live.json`](live.json) a pouĹľije z nÄ›j:
 
-- **`fuel`** – průměrné ceny pohonných hmot v ČR (týdenní data ČSÚ, otevřená datová sada CENPHMT)
-- **`leaflets`** – adresy akčních letáků obchodních řetězců (tlačítko „Akční leták" v detailu obchodu)
+- **`fuel`** â€“ prĹŻmÄ›rnĂ© ceny pohonnĂ˝ch hmot v ÄŚR (tĂ˝dennĂ­ data ÄŚSĂš, otevĹ™enĂˇ datovĂˇ sada CENPHMT)
+- **`leaflets`** â€“ adresy akÄŤnĂ­ch letĂˇkĹŻ obchodnĂ­ch Ĺ™etÄ›zcĹŻ (tlaÄŤĂ­tko â€žAkÄŤnĂ­ letĂˇk" v detailu obchodu)
 
-Díky tomu lze ceny a odkazy **aktualizovat bez vydávání nové verze aplikace** –
-stačí změnit `live.json` v tomto repozitáři. Když soubor není dostupný
-(offline, výpadek), aplikace použije data přibalená v instalaci.
+DĂ­ky tomu lze ceny a odkazy **aktualizovat bez vydĂˇvĂˇnĂ­ novĂ© verze aplikace** â€“
+staÄŤĂ­ zmÄ›nit `live.json` v tomto repozitĂˇĹ™i. KdyĹľ soubor nenĂ­ dostupnĂ˝
+(offline, vĂ˝padek), aplikace pouĹľije data pĹ™ibalenĂˇ v instalaci.
 
 ## Jak aktualizovat
 
-Na počítači s projektem Sarcher spusťte:
+Na poÄŤĂ­taÄŤi s projektem Sarcher spusĹĄte:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:\AI\Sarcher\tools\update_prices.ps1
 ```
 
-Skript stáhne čerstvé ceny z ČSÚ a změnu sem automaticky nahraje (commit + push).
-Případně lze `live.json` upravit ručně přímo na GitHubu (tužka „Edit" → Commit changes).
+Skript stĂˇhne ÄŤerstvĂ© ceny z ÄŚSĂš a zmÄ›nu sem automaticky nahraje (commit + push).
+PĹ™Ă­padnÄ› lze `live.json` upravit ruÄŤnÄ› pĹ™Ă­mo na GitHubu (tuĹľka â€žEdit" â†’ Commit changes).
+

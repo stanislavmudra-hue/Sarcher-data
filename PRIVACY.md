@@ -1,73 +1,74 @@
-# Zásady ochrany soukromí – aplikace Sarcher
+﻿# ZĂˇsady ochrany soukromĂ­ â€“ aplikace Okolník
 
-*Platné od 18. 7. 2026*
+*PlatnĂ© od 18. 7. 2026*
 
-Aplikace **Sarcher – vyhledávač míst v okolí** (dále „aplikace") respektuje
-vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává.
+Aplikace **Sarcher â€“ vyhledĂˇvaÄŤ mĂ­st v okolĂ­** (dĂˇle â€žaplikace") respektuje
+vaĹˇe soukromĂ­. Tento dokument popisuje, jakĂ© Ăşdaje aplikace zpracovĂˇvĂˇ.
 
-## Shrnutí
+## ShrnutĂ­
 
-Aplikace **nevytváří účty, nesbírá ani neukládá osobní údaje a nemá žádné
-vlastní servery**. Databáze míst je přibalená přímo v aplikaci a vyhledávání
-probíhá výhradně ve vašem zařízení.
+Aplikace **nevytvĂˇĹ™Ă­ ĂşÄŤty, nesbĂ­rĂˇ ani neuklĂˇdĂˇ osobnĂ­ Ăşdaje a nemĂˇ ĹľĂˇdnĂ©
+vlastnĂ­ servery**. DatabĂˇze mĂ­st je pĹ™ibalenĂˇ pĹ™Ă­mo v aplikaci a vyhledĂˇvĂˇnĂ­
+probĂ­hĂˇ vĂ˝hradnÄ› ve vaĹˇem zaĹ™Ă­zenĂ­.
 
 ## Poloha
 
-Aplikace používá polohu zařízení (GPS) **pouze k zobrazení míst ve vašem
-okolí na mapě a v seznamu**. Poloha se zpracovává jen v zařízení,
-**nikam se neodesílá ani neukládá**. Oprávnění k poloze můžete kdykoli
-odebrat v nastavení systému; aplikace pak nabídne omezený režim.
+Aplikace pouĹľĂ­vĂˇ polohu zaĹ™Ă­zenĂ­ (GPS) **pouze k zobrazenĂ­ mĂ­st ve vaĹˇem
+okolĂ­ na mapÄ› a v seznamu**. Poloha se zpracovĂˇvĂˇ jen v zaĹ™Ă­zenĂ­,
+**nikam se neodesĂ­lĂˇ ani neuklĂˇdĂˇ**. OprĂˇvnÄ›nĂ­ k poloze mĹŻĹľete kdykoli
+odebrat v nastavenĂ­ systĂ©mu; aplikace pak nabĂ­dne omezenĂ˝ reĹľim.
 
-## Síťová komunikace
+## SĂ­ĹĄovĂˇ komunikace
 
-Při používání aplikace dochází k těmto síťovým požadavkům (vaše IP adresa
-je z technické podstaty viditelná provozovatelům daných služeb):
+PĹ™i pouĹľĂ­vĂˇnĂ­ aplikace dochĂˇzĂ­ k tÄ›mto sĂ­ĹĄovĂ˝m poĹľadavkĹŻm (vaĹˇe IP adresa
+je z technickĂ© podstaty viditelnĂˇ provozovatelĹŻm danĂ˝ch sluĹľeb):
 
-- **Mapové podklady** – dlaždice map od OpenStreetMap
-  (https://www.openstreetmap.org/copyright) a letecké snímky Esri.
-- **Datový kanál** – aplikace stahuje soubor s průměrnými cenami paliv
-  (zdroj: Český statistický úřad) a odkazy na akční letáky z veřejného
-  repozitáře na GitHub.com.
-- **Odkazy** – po ťuknutí na navigaci, leták, hodnocení či web se otevře
-  příslušná externí aplikace nebo webová stránka, která má vlastní zásady.
+- **MapovĂ© podklady** â€“ dlaĹľdice map od OpenStreetMap
+  (https://www.openstreetmap.org/copyright) a leteckĂ© snĂ­mky Esri.
+- **DatovĂ˝ kanĂˇl** â€“ aplikace stahuje soubor s prĹŻmÄ›rnĂ˝mi cenami paliv
+  (zdroj: ÄŚeskĂ˝ statistickĂ˝ ĂşĹ™ad) a odkazy na akÄŤnĂ­ letĂˇky z veĹ™ejnĂ©ho
+  repozitĂˇĹ™e na GitHub.com.
+- **Odkazy** â€“ po ĹĄuknutĂ­ na navigaci, letĂˇk, hodnocenĂ­ ÄŤi web se otevĹ™e
+  pĹ™Ă­sluĹˇnĂˇ externĂ­ aplikace nebo webovĂˇ strĂˇnka, kterĂˇ mĂˇ vlastnĂ­ zĂˇsady.
 
 ## Reklamy (Google AdMob)
 
-Na podporovaných zařízeních zobrazuje aplikace reklamní banner služby
-**Google AdMob**. Společnost Google může v souvislosti se zobrazováním
-reklam zpracovávat reklamní identifikátory zařízení a související údaje
-dle svých zásad: https://policies.google.com/privacy a
+Na podporovanĂ˝ch zaĹ™Ă­zenĂ­ch zobrazuje aplikace reklamnĂ­ banner sluĹľby
+**Google AdMob**. SpoleÄŤnost Google mĹŻĹľe v souvislosti se zobrazovĂˇnĂ­m
+reklam zpracovĂˇvat reklamnĂ­ identifikĂˇtory zaĹ™Ă­zenĂ­ a souvisejĂ­cĂ­ Ăşdaje
+dle svĂ˝ch zĂˇsad: https://policies.google.com/privacy a
 https://support.google.com/admob/answer/6128543.
 
-V zemích EU/EHP se před zobrazením reklam zobrazí **formulář souhlasu
-(GDPR)**, kde můžete personalizaci reklam odmítnout. Volbu lze později
-změnit smazáním dat aplikace.
+V zemĂ­ch EU/EHP se pĹ™ed zobrazenĂ­m reklam zobrazĂ­ **formulĂˇĹ™ souhlasu
+(GDPR)**, kde mĹŻĹľete personalizaci reklam odmĂ­tnout. Volbu lze pozdÄ›ji
+zmÄ›nit smazĂˇnĂ­m dat aplikace.
 
-## Hlasování o aktuálnosti míst
+## HlasovĂˇnĂ­ o aktuĂˇlnosti mĂ­st
 
-Aplikace umožňuje anonymně hlasovat, zda je místo stále v provozu.
-Odesílá se pouze **souhrnný hlas** (+1 k počítadlu daného místa) do služby
-**Google Firebase (Firestore)** provozované správcem aplikace; nepřenáší se
-žádné osobní údaje ani identifikátory uživatele. Volitelné hlášení
-zaniklého místa vytváří veřejnou anonymní poznámku v projektu
+Aplikace umoĹľĹuje anonymnÄ› hlasovat, zda je mĂ­sto stĂˇle v provozu.
+OdesĂ­lĂˇ se pouze **souhrnnĂ˝ hlas** (+1 k poÄŤĂ­tadlu danĂ©ho mĂ­sta) do sluĹľby
+**Google Firebase (Firestore)** provozovanĂ© sprĂˇvcem aplikace; nepĹ™enĂˇĹˇĂ­ se
+ĹľĂˇdnĂ© osobnĂ­ Ăşdaje ani identifikĂˇtory uĹľivatele. VolitelnĂ© hlĂˇĹˇenĂ­
+zaniklĂ©ho mĂ­sta vytvĂˇĹ™Ă­ veĹ™ejnou anonymnĂ­ poznĂˇmku v projektu
 OpenStreetMap (viz openstreetmap.org).
 
-## Data míst
+## Data mĂ­st
 
-Databáze míst pochází z projektu **OpenStreetMap**
-(© přispěvatelé OpenStreetMap, licence ODbL 1.0). Průměrné ceny pohonných
-hmot pocházejí z otevřených dat **Českého statistického úřadu** a jsou
-celorepublikovým průměrem, nikoli cenou konkrétní čerpací stanice.
+DatabĂˇze mĂ­st pochĂˇzĂ­ z projektu **OpenStreetMap**
+(Â© pĹ™ispÄ›vatelĂ© OpenStreetMap, licence ODbL 1.0). PrĹŻmÄ›rnĂ© ceny pohonnĂ˝ch
+hmot pochĂˇzejĂ­ z otevĹ™enĂ˝ch dat **ÄŚeskĂ©ho statistickĂ©ho ĂşĹ™adu** a jsou
+celorepublikovĂ˝m prĹŻmÄ›rem, nikoli cenou konkrĂ©tnĂ­ ÄŤerpacĂ­ stanice.
 
-## Vaše práva
+## VaĹˇe prĂˇva
 
-Jelikož aplikace neukládá žádné osobní údaje, není co exportovat ani mazat.
-Pro údaje zpracovávané společností Google (reklamy) využijte nástroje
-Google. S dotazy se obraťte na správce aplikace:
+JelikoĹľ aplikace neuklĂˇdĂˇ ĹľĂˇdnĂ© osobnĂ­ Ăşdaje, nenĂ­ co exportovat ani mazat.
+Pro Ăşdaje zpracovĂˇvanĂ© spoleÄŤnostĂ­ Google (reklamy) vyuĹľijte nĂˇstroje
+Google. S dotazy se obraĹĄte na sprĂˇvce aplikace:
 
 **Stanislav Mudra**, e-mail: stanislavmudra@gmail.com
 
-## Změny
+## ZmÄ›ny
 
-Aktuální verze těchto zásad je vždy dostupná na této adrese. O podstatných
-změnách budeme informovat v popisu aktualizace aplikace.
+AktuĂˇlnĂ­ verze tÄ›chto zĂˇsad je vĹľdy dostupnĂˇ na tĂ©to adrese. O podstatnĂ˝ch
+zmÄ›nĂˇch budeme informovat v popisu aktualizace aplikace.
+
