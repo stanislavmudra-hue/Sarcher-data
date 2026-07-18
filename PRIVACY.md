@@ -48,7 +48,9 @@ změnit smazáním dat aplikace.
 Aplikace umožňuje anonymně hlasovat, zda je místo stále v provozu.
 Odesílá se pouze **souhrnný hlas** (+1 k počítadlu daného místa) do služby
 **Google Firebase (Firestore)** provozované správcem aplikace; nepřenáší se
-žádné osobní údaje ani identifikátory uživatele. Volitelné hlášení
+žádné osobní údaje ani identifikátory uživatele. Stejnou službou se
+odesílají i **dobrovolná anonymní hlášení problémů** (pouze vámi napsaný
+text a verze aplikace). Volitelné hlášení
 zaniklého místa vytváří veřejnou anonymní poznámku v projektu
 OpenStreetMap (viz openstreetmap.org).
 
