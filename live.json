@@ -1,0 +1,31 @@
+{
+  "updated": "2026-07-18",
+  "fuel": {
+    "week": "29. týden 2026",
+    "natural95": 39.81,
+    "diesel": 36.79,
+    "lpg": 22.07,
+    "source": "ČSÚ"
+  },
+  "leaflets": {
+    "kaufland": "https://www.kupi.cz/letaky/kaufland",
+    "lidl": "https://www.kupi.cz/letaky/lidl",
+    "penny": "https://www.kupi.cz/letaky/penny-market",
+    "billa": "https://www.kupi.cz/letaky/billa",
+    "albert": "https://www.kupi.cz/letaky/albert",
+    "tesco": "https://www.kupi.cz/letaky/tesco",
+    "globus": "https://www.kupi.cz/letaky/globus",
+    "coop": "https://www.kupi.cz/letaky/coop",
+    "jednota": "https://www.kupi.cz/letaky/coop",
+    "datart": "https://www.kupi.cz/letaky/datart",
+    "planeo": "https://www.kupi.cz/letaky/planeo-elektro",
+    "electro world": "https://www.kupi.cz/letaky/electroworld",
+    "ikea": "https://www.kupi.cz/letaky/ikea",
+    "jysk": "https://www.kupi.cz/letaky/jysk",
+    "sconto": "https://www.kupi.cz/letaky/sconto-nabytek",
+    "möbelix": "https://www.kupi.cz/letaky/mobelix",
+    "mobelix": "https://www.kupi.cz/letaky/mobelix",
+    "xxxlutz": "https://www.kupi.cz/letaky/xxxlutz",
+    "okay": "https://www.kupi.cz/letaky/okay"
+  }
+}
