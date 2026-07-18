@@ -1,5 +1,8 @@
 {
   "updated": "2026-07-18",
+  "ads": {
+    "blockedManufacturers": ["realme", "oppo", "oneplus"]
+  },
   "fuel": {
     "week": "29. týden 2026",
     "natural95": 39.81,
