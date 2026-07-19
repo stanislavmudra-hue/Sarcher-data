@@ -5,7 +5,7 @@
     "blockedManufacturers": []
   },
   "extraPlaces": [],
-  "blockedSuggesters": [],
+  "blockedSuggesters": ["2fd32ce3ecae45eda012ca855f7aecdc"],
   "fuel": {
     "week": "29. týden 2026",
     "natural95": 39.81,
