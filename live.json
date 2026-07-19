@@ -7,13 +7,7 @@
   "extraPlaces": [],
   "blockedSuggesters": [],
   "promoted": {
-    "places": [
-      {
-        "id": "way/36331269",
-        "name": "Obchůdek Rtyně nad Bílinou – TEST zvýraznění",
-        "until": "2026-08-19"
-      }
-    ]
+    "places": []
   },
   "premium": {
     "devices": []
