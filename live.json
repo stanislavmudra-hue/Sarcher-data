@@ -7,7 +7,13 @@
   "extraPlaces": [],
   "blockedSuggesters": [],
   "promoted": {
-    "places": []
+    "places": [
+      {
+        "id": "way/36331269",
+        "name": "Obchůdek Rtyně – TEST Ověřeno",
+        "until": "2026-08-19"
+      }
+    ]
   },
   "premium": {
     "devices": []
