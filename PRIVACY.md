@@ -54,6 +54,12 @@ text a verze aplikace). Volitelné hlášení
 zaniklého místa vytváří veřejnou anonymní poznámku v projektu
 OpenStreetMap (viz openstreetmap.org).
 
+**Návrhy nových míst:** k návrhu se přikládá náhodně vygenerovaný
+anonymní kód instalace aplikace (není spojen s vaší osobou ani se
+zařízením a lze jej obnovit smazáním dat aplikace). Slouží výhradně
+k ochraně před zneužíváním funkce (spam); správce může návrhy
+z konkrétní instalace odmítat.
+
 ## Osobní data v aplikaci
 
 Oblíbená místa, vlastní poznámky a fotografie pořízené v aplikaci se
