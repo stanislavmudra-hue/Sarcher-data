@@ -4,20 +4,7 @@
     "enabled": true,
     "blockedManufacturers": []
   },
-  "extraPlaces": [
-    {
-      "id": "extra/test",
-      "name": "Testovací místo (smažu)",
-      "category": "supermarkets",
-      "lat": 50.6015,
-      "lon": 13.9104,
-      "street": "Testovací 1",
-      "city": "Sezemice",
-      "opening_hours": "Mo-Fr 08:00-17:00; Sa 08:00-11:00",
-      "phone": "+420123456789",
-      "website": "https://www.seznam.cz"
-    }
-  ],
+  "extraPlaces": [],
   "fuel": {
     "week": "29. týden 2026",
     "natural95": 39.81,
