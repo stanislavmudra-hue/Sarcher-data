@@ -38,6 +38,8 @@ systému; aplikace pak nabídne omezený režim.
 **Navigace:** při volbě „Navigovat" aplikace předá cíl (a u služby Mapy.com
 i vaši výchozí polohu) navigační aplikaci či webu dle vaší volby (Google
 Mapy, Mapy.com / Seznam.cz, Waze). Tyto služby mají vlastní zásady.
+U nádraží a zastávek lze obdobně otevřít odjezdovou tabuli ve službě
+**IDOS** – předá se jen název zastávky, nikoli vaše poloha.
 
 ## Data, která zůstávají jen ve vašem zařízení
 
@@ -94,6 +96,12 @@ s aktualizacemi, které nevyžadují novou verzi – např. průměrné ceny pal
 poskytovateli se předá jen běžný síťový požadavek (IP adresa), žádné vaše
 osobní údaje.
 
+**Počasí:** pro atmosférické efekty v Objevování (mraky, mlha) stahuje
+aplikace aktuální počasí ze služby **Open-Meteo**. Dotaz obsahuje **pevný
+seznam bodů** rozmístěných po ČR, stejný pro všechny uživatele – vaše poloha
+ani výřez mapy se neodesílají. Počasí pro vaše okolí se vybere z už
+stažených dat přímo v telefonu.
+
 ## Nákupy v aplikaci
 
 Prémiové funkce lze zakoupit přes **Google Play**. Platbu zpracovává výhradně
@@ -112,8 +120,12 @@ pouze informaci, zda je nákup aktivní.
   snímky).
 - **Wikimedia / Wikipedia** – popisek zobrazovaného místa.
 - **GitHub** (Microsoft) – stažení datového kanálu.
+- **Open-Meteo** – aktuální počasí pro pevné body v ČR (bez odeslání vaší
+  polohy).
 - **Navigační služby dle vaší volby** – Google Mapy, Mapy.com / Seznam.cz,
   Waze (jen když spustíte navigaci).
+- **IDOS** (CHAPS) – odjezdové tabule zastávek a nádraží, jen když je sami
+  otevřete (předá se název zastávky).
 
 Tito příjemci obdrží běžné síťové požadavky (zejména IP adresu a případně
 souřadnice podle konkrétní funkce).
