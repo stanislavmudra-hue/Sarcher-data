@@ -5,6 +5,11 @@ on:
     - cron: '0 6 * * 3'   # kazdou stredu 06:00 UTC (08:00 letniho casu CZ)
   workflow_dispatch: {}    # + rucni spusteni tlacitkem v zalozce Actions
   push:
+    branches:
+      - main               # POZOR: bez tohoto se spusti i pri vytvoreni
+                           # znacky (napr. vydani map-v1 s offline balicky).
+                           # U znacky je HEAD "detached" a zaverecny git push
+                           # skonci chybou 128 - viz beh #3 z 25. 7. 2026.
     paths:
       - 'update_fuel.py'   # prvni test se spusti hned po nahrani skriptu
 
