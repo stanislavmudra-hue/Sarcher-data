@@ -126,8 +126,10 @@ souřadnice podle konkrétní funkce).
   jeho zapnutí se nepoužívá.
 - **Oznámení** – trvalé oznámení, že běží záznam trasy na pozadí.
 - **Internet** – mapy, reklamy, odeslání návrhů, hlášení a zpětné vazby.
-- **Fotoaparát / galerie** (přes systémový výběr) – fotky do deníku a výprav;
-  zůstávají v zařízení.
+- **Fotoaparát** – pořizování fotek k výpravám a do deníku přímo v aplikaci
+  (vlastní hledáček). Zvuk se nenahrává, fotky zůstávají v zařízení.
+- **Galerie / soubory** – výběr už pořízených fotek a načtení či uložení
+  zálohy (ZIP) přes systémový výběr souborů.
 
 ## Data míst
 
