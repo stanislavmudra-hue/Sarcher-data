@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 24. 7. 2026*
+*Platné od 26. 7. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -13,7 +13,7 @@ Aplikace **nevytváří účty ani neshromažďuje osobní údaje spojené s va�
 osobou** a nemá vlastní servery pro vaše data. Poloha, trasa, deník, výpravy
 i fotky zůstávají uložené jen ve vašem telefonu. Na server správce posíláte
 to, co sami odešlete (návrh místa, hlasování, zpětná vazba) – bez jména či
-e-mailu; aplikace navíc odesílá **anonymní souhrnné statistiky používání**
+e-mailu; aplikace navíc odesílá **souhrnné statistiky používání**
 (lze vypnout v nastavení). Některé funkce se dotazují veřejných služeb
 třetích stran (mapy, OpenStreetMap, Wikipedie). Hlášení „místo už neexistuje"
 se zveřejní jako veřejná poznámka v OpenStreetMap. Bezplatná verze zobrazuje
@@ -66,11 +66,11 @@ resetovat reklamní ID v nastavení systému Android.
 ## Údaje, které sami odešlete
 
 - **Do databáze správce (Google Firebase / Firestore):** návrh nového místa
-  (název, kategorie, poznámka, souřadnice, verze aplikace, anonymní kód
-  instalace proti spamu), anonymní hlas o aktuálnosti místa (+1 k počítadlu)
+  (název, kategorie, poznámka, souřadnice, verze aplikace, pseudonymní
+  kód instalace proti spamu), hlas o aktuálnosti místa (+1 k počítadlu)
   a dobrovolná zpětná vazba (text + verze aplikace). Neodesílá se jméno,
-  e-mail, telefon ani vaše poloha. Anonymní kód instalace není spojen s vaší
-  osobou a lze jej obnovit smazáním dat aplikace.
+  e-mail, telefon ani vaše poloha. Kód instalace lze obnovit smazáním dat
+  aplikace (viz vysvětlení níže).
 - **Veřejně do OpenStreetMap:** hlášení „místo už neexistuje / je mimo
   provoz" vytvoří po vašem potvrzení **veřejnou anonymní poznámku** trvale
   dohledatelnou na openstreetmap.org (obsahuje název a souřadnice místa),
@@ -78,10 +78,20 @@ resetovat reklamní ID v nastavení systému Android.
 - **Sdílení:** obsah (např. karta výpravy) předáte přes systémovou nabídku
   tam, kam sami zvolíte.
 
-## Anonymní statistiky používání
+
+**Co je identifikátor instalace.** Náhodně vygenerovaný kód, který vznikne
+při prvním spuštění a zůstává stejný, dokud aplikaci nesmažete. Neobsahuje nic
+o vás ani o telefonu a sami k němu nemáme žádné jméno ani e-mail. Protože je
+ale *trvalý* a odlišuje jednu instalaci od druhé, považujeme ho podle GDPR
+(recitál 26) za **pseudonymizovaný osobní údaj** – ne za anonymní. Slouží jen
+k tomu, abychom u zpětné vazby dohledali váš případ, omezili spam u návrhů
+a hlasování a mohli ručně přiznat prémiový přístup konkrétní instalaci
+(testeři, výherci). K ničemu jinému ho nepoužíváme.
+
+## Souhrnné statistiky používání
 
 Aby bylo možné aplikaci zlepšovat a odhalovat chyby, odesílá aplikace do služby
-Google Firebase základní **anonymní a souhrnné** statistiky používání – počet
+Google Firebase základní **souhrnné** statistiky používání – počet
 spuštění, denní počet aktivních zařízení, verzi aplikace, orientační stáří
 instalace, počty použití funkcí a počty pádů. Zapisují se pouze jako souhrnná
 počítadla („dnes +1"); neodesílá se žádné jméno, identifikátor, poloha ani
@@ -113,7 +123,7 @@ pouze informaci, zda je nákup aktivní.
 Údaje nikomu neprodáváme. Příjemci / poskytovateli služeb jsou:
 
 - **Google** – AdMob (reklamy), Firebase/Firestore (návrhy, hlasy, zpětná
-  vazba, anonymní statistiky), Google Play (nákupy a distribuce).
+  vazba, souhrnné statistiky), Google Play (nákupy a distribuce).
 - **OpenStreetMap** – mapové dlaždice a komunitní poznámky (načítání
   i veřejné hlášení zaniklých míst).
 - **OpenTopoMap** a **Esri** – mapové podklady (turistická mapa, letecké
@@ -154,12 +164,21 @@ celorepublikovým průměrem, nikoli cenou konkrétní čerpací stanice.
 
 Podle GDPR máte právo na přístup, opravu, výmaz, omezení zpracování,
 přenositelnost a námitku. Data uložená v telefonu máte plně pod kontrolou
-(smazání dat / odinstalace). Údaje odeslané na server jsou anonymní, takže
-je v souladu s čl. 11 GDPR nemusíme umět přiřadit ke konkrétní osobě. Pro
-údaje zpracovávané společností Google (reklamy) využijte nástroje Google.
-Máte také právo podat stížnost u Úřadu pro ochranu osobních údajů
-(uoou.gov.cz). S dotazy se obraťte na správce: **Stanislav Mudra**,
-e-mail: stamu.apps@gmail.com.
+(smazání dat / odinstalace). U údajů odeslaných na server nás
+kontaktujte e-mailem a přiložte svůj **kód instalace** (najdete ho v aplikaci
+v „O aplikaci"). Podle něj vaše záznamy dohledáme a na požádání smažeme.
+Bez toho kódu je k vaší osobě přiřadit neumíme (čl. 11 GDPR) – jiný údaj
+o vás nemáme. Pro údaje zpracovávané společností Google (reklamy)
+využijte nástroje Google. Máte také právo podat stížnost u Úřadu pro
+ochranu osobních údajů (uoou.gov.cz). S dotazy se obraťte na správce:
+**Stanislav Mudra**, e-mail: stamu.apps@gmail.com.
+
+## Děti
+
+Aplikace není určena dětem mladším 15 let (hranice souhlasu se zpracováním
+osobních údajů podle § 7 zákona č. 110/2019 Sb.) a vědomě neshromažďujeme
+jejich údaje. Pokud zjistíte, že nám dítě odeslalo osobní údaje, napište nám
+a my je smažeme.
 
 ## Změny
 
