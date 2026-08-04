@@ -10,7 +10,12 @@
     "places": []
   },
   "premium": {
-    "devices": []
+    "devices": [
+      {
+        "id": "aa36dccd804b2ae5a216a6218ffc2b1f",
+        "until": "2026-09-04"
+      }
+    ]
   },
   "fuel": {
     "week": "30. týden 2026",
