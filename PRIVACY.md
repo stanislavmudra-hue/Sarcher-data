@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 26. 7. 2026*
+*Platné od 21. 8. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -9,8 +9,11 @@ a jaká máte práva. Zpracování probíhá v souladu s nařízením (EU) 2016/
 
 ## Shrnutí
 
-Aplikace **nevytváří účty ani neshromažďuje osobní údaje spojené s vaší
-osobou** a nemá vlastní servery pro vaše data. Poloha, trasa, deník, výpravy
+Aplikace **nevyžaduje účet a neshromažďuje osobní údaje spojené s vaší
+osobou** a nemá vlastní servery pro vaše data. Volitelně si můžete zapnout
+**žebříček na okolnik.cz** – teprve tím začne aplikace odesílat přezdívku
+a několik čísel o vaší chůzi; výchozí stav je vypnuto a dá se kdykoli
+zrušit. Poloha, trasa, deník, výpravy
 i fotky zůstávají uložené jen ve vašem telefonu. Na server správce posíláte
 to, co sami odešlete (návrh místa, hlasování, zpětná vazba) – bez jména či
 e-mailu; aplikace navíc odesílá **souhrnné statistiky používání**
@@ -88,6 +91,40 @@ k tomu, abychom u zpětné vazby dohledali váš případ, omezili spam u návrh
 a hlasování a mohli ručně přiznat prémiový přístup konkrétní instalaci
 (testeři, výherci). K ničemu jinému ho nepoužíváme.
 
+## Žebříček a účet na webu (dobrovolné)
+
+Aplikace jde používat celým rozsahem bez účtu a bez připojení k webu.
+Pokud si v aplikaci („Více → Můj Okolník“) zapnete účast v žebříčku,
+platí navíc toto:
+
+- **Co je veřejné.** Na stránce okolnik.cz/zebricek se zobrazí vaše
+  **přezdívka**, počet ušlých kilometrů, počet nových obcí a počet
+  fotovýprav za aktuální měsíc, případně kraj, pokud si ho zvolíte.
+  Přezdívku si volíte sami – nemusí to být vaše jméno.
+- **Co se neodesílá nikdy.** Vaše poloha, trasa, deník, fotky, seznam
+  navštívených míst ani e-mail. Z těchto dat vznikají jen výše uvedená
+  souhrnná čísla, která se počítají přímo v telefonu.
+- **Anonymní identita.** Aby nikdo nemohl přepisovat cizí výsledky,
+  získá aplikace při zapnutí účasti **anonymní účet Firebase Auth**.
+  Ten neobsahuje jméno ani e-mail – je to náhodný kód, který podle GDPR
+  považujeme za pseudonymizovaný údaj (viz vysvětlení identifikátoru
+  instalace výše).
+- **Krokoměr.** Se zapnutou účastí si aplikace vyžádá přístup
+  k čítači kroků telefonu. Slouží jen k tomu, aby šlo odlišit chůzi
+  od jízdy – do žebříčku se posílá pouze **měsíční počet kroků**
+  a příznak „podloženo kroky“, ne jednotlivá měření ani časy.
+  Souhlas můžete kdykoli odvolat v nastavení Androidu.
+- **Spárování s webem.** Na okolnik.cz/ucet se lze přihlásit účtem
+  Google a jednorázovým šestiznakovým kódem z aplikace připojit svou
+  hru. Vaše e-mailová adresa zůstává u Googlu – **aplikace ji nikdy
+  nedostane** a na naší straně se ukládá jen odkaz mezi účtem Google
+  a anonymním kódem hráče. Kód platí 15 minut a po použití se maže.
+  Spárovaný účet navíc vidí svůj **soukromý profil** (úroveň, souhrnná
+  čísla, úspěchy); ten je čitatelný jen pro něj, ne veřejně.
+- **Odhlášení.** Vypnutím přepínače v „Můj Okolník“ se váš řádek
+  z žebříčku smaže a další čísla se už neposílají. O smazání profilu
+  i spárování lze kdykoli požádat na stamu.apps@gmail.com.
+
 ## Souhrnné statistiky používání
 
 Aby bylo možné aplikaci zlepšovat a odhalovat chyby, odesílá aplikace do služby
@@ -97,6 +134,29 @@ instalace, počty použití funkcí a počty pádů. Zapisují se pouze jako sou
 počítadla („dnes +1"); neodesílá se žádné jméno, identifikátor, poloha ani
 obsah, takže je nelze přiřadit ke konkrétní osobě. Sběr lze kdykoli vypnout
 v nastavení aplikace (přepínač „Anonymní statistiky používání").
+
+## Hlášení chyb a pádů
+
+Když aplikace spadne nebo přestane reagovat, vytvoří o tom technický záznam
+a při dalším spuštění ho odešle vývojáři, aby šlo chybu opravit. Takové
+hlášení obsahuje:
+
+- technický popis chyby (tzv. stack trace / ANR trace) — tedy které části
+  programu selhaly,
+- **model zařízení** a verzi Androidu,
+- verzi aplikace a údaj o využité paměti,
+- **náhodně vygenerovaný identifikátor zařízení**, aby šlo poznat, že několik
+  hlášení pochází z jednoho telefonu (není odvozený z žádného vašeho údaje
+  ani z reklamního ID a nelze podle něj zjistit, kdo jste).
+
+Hlášení **neobsahuje** vaši polohu, deník, fotky ani obsah, který jste
+v aplikaci vytvořili. Ukládá se do služby Google Firestore a slouží výhradně
+k opravě chyb.
+
+Odesílání pádů vypíná **týž přepínač** jako souhrnné statistiky („Anonymní
+statistiky používání") — když je vypnutý, neodešle se nic. Podrobný záznam
+zůstává navíc uložený v telefonu a můžete ho sami sdílet z obrazovky
+„O aplikaci".
 
 ## Data stahovaná do aplikace
 
@@ -112,6 +172,11 @@ seznam bodů** rozmístěných po ČR, stejný pro všechny uživatele – vaše
 ani výřez mapy se neodesílají. Počasí pro vaše okolí se vybere z už
 stažených dat přímo v telefonu.
 
+**Srážkový radar:** protože předpověď se občas mýlí, ověřuje aplikace déšť
+ještě podle **radarových snímků služby RainViewer**. Stahuje se seznam
+dostupných snímků a obrázkové dlaždice radaru; jde o běžné stažení obsahu,
+vaše poloha se neodesílá.
+
 ## Nákupy v aplikaci
 
 Prémiové funkce lze zakoupit přes **Google Play**. Platbu zpracovává výhradně
@@ -123,7 +188,9 @@ pouze informaci, zda je nákup aktivní.
 Údaje nikomu neprodáváme. Příjemci / poskytovateli služeb jsou:
 
 - **Google** – AdMob (reklamy), Firebase/Firestore (návrhy, hlasy, zpětná
-  vazba, souhrnné statistiky), Google Play (nákupy a distribuce).
+  vazba, souhrnné statistiky, žebříček), Firebase Auth (anonymní identita
+  hráče a přihlášení účtem Google na webu), Google Play (nákupy
+  a distribuce).
 - **OpenStreetMap** – mapové dlaždice a komunitní poznámky (načítání
   i veřejné hlášení zaniklých míst).
 - **OpenTopoMap** a **Esri** – mapové podklady (turistická mapa, letecké
@@ -132,6 +199,7 @@ pouze informaci, zda je nákup aktivní.
 - **GitHub** (Microsoft) – stažení datového kanálu.
 - **Open-Meteo** – aktuální počasí pro pevné body v ČR (bez odeslání vaší
   polohy).
+- **RainViewer** – snímky srážkového radaru (bez odeslání vaší polohy).
 - **Navigační služby dle vaší volby** – Google Mapy, Mapy.com / Seznam.cz,
   Waze (jen když spustíte navigaci).
 - **IDOS** (CHAPS) – odjezdové tabule zastávek a nádraží, jen když je sami
@@ -152,6 +220,10 @@ souřadnice podle konkrétní funkce).
   (vlastní hledáček). Zvuk se nenahrává, fotky zůstávají v zařízení.
 - **Galerie / soubory** – výběr už pořízených fotek a načtení či uložení
   zálohy (ZIP) přes systémový výběr souborů.
+- **Rozpoznání tělesné aktivity** – čtení čítače kroků telefonu pro
+  počítání kroků ve výpravě a pro odlišení chůze od jízdy v žebříčku.
+  Aplikace o něj požádá až při spuštění výpravy nebo při zapnutí
+  žebříčku; bez něj vše ostatní funguje dál.
 
 ## Data míst
 
