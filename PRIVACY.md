@@ -125,6 +125,21 @@ platí navíc toto:
   z žebříčku smaže a další čísla se už neposílají. O smazání profilu
   i spárování lze kdykoli požádat na stamu.apps@gmail.com.
 
+## Záloha do účtu Google (služba Androidu)
+
+Android umí sám zálohovat data aplikací do zálohy telefonu ve vašem
+účtu Google. Okolník to má povolené a od verze 1.531 posílá do téhle
+zálohy **jen postup ve hře** (odkrytá mapa, ušlé kilometry, deník,
+výpravy, návštěvy, úspěchy a nastavení) — **fotky se nezálohují**.
+Po přeinstalování nebo na novém telefonu se postup obnoví sám.
+
+Zálohu provádí systém, ne my: data putují do úložiště Googlu
+svázaného s vaším účtem, jsou šifrovaná a **správce aplikace k nim
+nemá přístup**. Vypnout je lze v nastavení Androidu
+(*Google → Zálohování*). Nezávisle na tom si můžete kdykoli udělat
+vlastní zálohu do souboru ZIP přímo v aplikaci — ta obsahuje i fotky
+a nikam se neodesílá.
+
 ## Souhrnné statistiky používání
 
 Aby bylo možné aplikaci zlepšovat a odhalovat chyby, odesílá aplikace do služby
