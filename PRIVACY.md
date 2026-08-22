@@ -247,6 +247,24 @@ Databáze míst pochází z projektu **OpenStreetMap**
 hmot pocházejí z otevřených dat **Českého statistického úřadu** a jsou
 celorepublikovým průměrem, nikoli cenou konkrétní čerpací stanice.
 
+## Smazání účtu a dat
+
+Účet v Okolníku vzniká jen tehdy, když si sami zapnete žebříček nebo
+propojíte hru s webem — hra samotná ho nepotřebuje.
+
+**Smazat ho jde dvěma způsoby:**
+
+- **v aplikaci:** *Více → Můj Okolník → Smazat účet a data ze serveru*.
+  Zmizí řádek v žebříčku za **všechna období**, profil pro web
+  i anonymní identita hráče.
+- **bez aplikace:** na stránce
+  [okolnik.cz/smazani-uctu](https://okolnik.cz/smazani-uctu/), kde je
+  i adresa pro žádost e-mailem. Žádost vyřídíme nejpozději do 30 dnů.
+
+Data ve hře — odkrytá mapa, ušlé kilometry, deník, výpravy a fotky —
+smazáním účtu **nezmizí**, protože na serveru nikdy nebyla. Odstraníte
+je vymazáním dat aplikace nebo její odinstalací.
+
 ## Vaše práva
 
 Podle GDPR máte právo na přístup, opravu, výmaz, omezení zpracování,
