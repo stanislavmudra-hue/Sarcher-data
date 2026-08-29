@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 21. 8. 2026*
+*Platné od 29. 8. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -9,11 +9,12 @@ a jaká máte práva. Zpracování probíhá v souladu s nařízením (EU) 2016/
 
 ## Shrnutí
 
-Aplikace **nevyžaduje účet a neshromažďuje osobní údaje spojené s vaší
-osobou** a nemá vlastní servery pro vaše data. Volitelně si můžete zapnout
-**žebříček na okolnik.cz** – teprve tím začne aplikace odesílat přezdívku
-a několik čísel o vaší chůzi; výchozí stav je vypnuto a dá se kdykoli
-zrušit. Poloha, trasa, deník, výpravy
+Základní aplikace **nevyžaduje účet a neshromažďuje osobní údaje spojené
+s vaší osobou** a nemá vlastní servery pro vaše data. Volitelně si můžete
+zapnout **žebříček na okolnik.cz** nebo hrát **týmovou hru Dobyvatel** –
+obojí vyžaduje přihlášení (Google, nebo e-mail a heslo) a teprve tím
+začne aplikace odesílat herní údaje popsané níže; výchozí stav je
+vypnuto a dá se kdykoli zrušit. Poloha, trasa, deník, výpravy
 i fotky zůstávají uložené jen ve vašem telefonu. Na server správce posíláte
 to, co sami odešlete (návrh místa, hlasování, zpětná vazba) – bez jména či
 e-mailu; aplikace navíc odesílá **souhrnné statistiky používání**
@@ -93,7 +94,11 @@ a hlasování a mohli ručně přiznat prémiový přístup konkrétní instalac
 
 ## Žebříček a účet na webu (dobrovolné)
 
-Aplikace jde používat celým rozsahem bez účtu a bez připojení k webu.
+Mapa, objevování, deník i výpravy fungují bez účtu a bez připojení
+k webu. Žebříček, hra Dobyvatel a soutěže vyžadují **přihlášení** –
+účtem Google, nebo e-mailem a heslem (spravuje služba Firebase
+Authentication společnosti Google; z účtu Google aplikace dostává jen
+přihlašovací identifikátor, heslo e-mailového účtu nikdy nevidíme).
 Pokud si v aplikaci („Více → Můj Okolník“) zapnete účast v žebříčku,
 platí navíc toto:
 
@@ -104,26 +109,45 @@ platí navíc toto:
 - **Co se neodesílá nikdy.** Vaše poloha, trasa, deník, fotky, seznam
   navštívených míst ani e-mail. Z těchto dat vznikají jen výše uvedená
   souhrnná čísla, která se počítají přímo v telefonu.
-- **Anonymní identita.** Aby nikdo nemohl přepisovat cizí výsledky,
-  získá aplikace při zapnutí účasti **anonymní účet Firebase Auth**.
-  Ten neobsahuje jméno ani e-mail – je to náhodný kód, který podle GDPR
-  považujeme za pseudonymizovaný údaj (viz vysvětlení identifikátoru
-  instalace výše).
+- **Identita hráče.** Výsledky jsou svázané s vaším přihlášeným
+  účtem. Navenek vystupujete jen pod zvolenou přezdívkou a náhodným
+  kódem účtu, který podle GDPR považujeme za pseudonymizovaný údaj
+  (viz vysvětlení identifikátoru instalace výše); jméno ani e-mail se
+  nikde nezobrazují.
 - **Krokoměr.** Se zapnutou účastí si aplikace vyžádá přístup
   k čítači kroků telefonu. Slouží jen k tomu, aby šlo odlišit chůzi
   od jízdy – do žebříčku se posílá pouze **měsíční počet kroků**
   a příznak „podloženo kroky“, ne jednotlivá měření ani časy.
   Souhlas můžete kdykoli odvolat v nastavení Androidu.
-- **Spárování s webem.** Na okolnik.cz/ucet se lze přihlásit účtem
-  Google a jednorázovým šestiznakovým kódem z aplikace připojit svou
-  hru. Vaše e-mailová adresa zůstává u Googlu – **aplikace ji nikdy
-  nedostane** a na naší straně se ukládá jen odkaz mezi účtem Google
-  a anonymním kódem hráče. Kód platí 15 minut a po použití se maže.
-  Spárovaný účet navíc vidí svůj **soukromý profil** (úroveň, souhrnná
-  čísla, úspěchy); ten je čitatelný jen pro něj, ne veřejně.
+- **Stejný účet na webu.** Na okolnik.cz/ucet se přihlásíte tímtéž
+  účtem jako v aplikaci a uvidíte svůj **soukromý profil** (úroveň,
+  souhrnná čísla, úspěchy); ten je čitelný jen pro vás, ne veřejně.
 - **Odhlášení.** Vypnutím přepínače v „Můj Okolník“ se váš řádek
   z žebříčku smaže a další čísla se už neposílají. O smazání profilu
   i spárování lze kdykoli požádat na stamu.apps@gmail.com.
+
+## Hra Dobyvatel a soutěže (dobrovolné)
+
+Dobyvatel je týmová hra: krajské týmy obsazují vlajky (významná místa)
+po celém Česku. Režim vyžaduje přihlášení a jeho zapnutí je vaše volba.
+Když ho hrajete, platí toto:
+
+- **Přítomnost u vlajky.** Při obsazování nebo bránění vlajky odesílá
+  aplikace na server hry (Google Firebase) krátkodobý záznam
+  o přítomnosti: číslo vlajky, váš tým, čas a polohu telefonu
+  v okamžiku boje (kvůli ověření, že u vlajky opravdu stojíte).
+  Záznam slouží jen rozhodčímu hry k vyhodnocení boje a **krátce po
+  vyhodnocení se maže** (řádově minuty). Vaše průběžná poloha ani
+  trasa se neodesílají – mimo boj o vlajku neodchází o poloze nic.
+- **Co je veřejné.** Herní stav soutěže: která místa drží který tým,
+  kdy byla dobyta, skóre týmů a bodování hráčů vedené pod přezdívkou
+  či pseudonymním kódem účtu (bez jména a e-mailu). Tyto údaje se
+  zobrazují v aplikaci i na okolnik.cz/dobyvatel.
+- **Členství v týmu.** U vašeho účtu se ukládá zvolený tým (kraj)
+  a případná účast ve vlastní soutěži. Tým jde po uplynutí ochranné
+  lhůty změnit.
+- **Konec účasti.** Hru kdykoli opustíte přepnutím režimu; o smazání
+  herních dat účtu lze požádat na stamu.apps@gmail.com.
 
 ## Záloha do účtu Google (služba Androidu)
 
