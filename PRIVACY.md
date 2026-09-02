@@ -222,7 +222,7 @@ ještě podle **radarových snímků služby RainViewer**. Stahuje se seznam
 dostupných snímků a obrázkové dlaždice radaru; jde o běžné stažení obsahu,
 vaše poloha se neodesílá.
 
-## Nákupy v aplikaci a objednávky firem
+## Nákupy v aplikaci
 
 Prémiové funkce (předplatné Okolník Premium, zvýraznění podniku, vlastní
 místo na mapě) lze zakoupit přes **Google Play**. Platbu zpracovává výhradně
@@ -235,11 +235,6 @@ Máte-li přihlášený účet, aplikace k němu zapíše příznak, zda je Prem
 aktivní (bez částek a údajů o platbě). Podle něj web okolnik.cz skryje
 reklamy a povolí zakládání soutěží v Dobyvateli.
 
-**Objednávka pro firmy na webu (okolnik.cz/firmy):** při objednávce
-zvýraznění na fakturu uložíme název a adresu podniku, kategorii, kontaktní
-e‑mail nebo telefon, IČO a text, který chcete zobrazit. Údaje slouží jen
-k vyřízení objednávky, vystavení faktury a zobrazení schváleného obsahu
-v aplikaci; po vyřízení se objednávka z databáze maže.
 
 ## Komu údaje předáváme
 
