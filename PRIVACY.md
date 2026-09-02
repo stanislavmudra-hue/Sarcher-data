@@ -79,6 +79,12 @@ resetovat reklamní ID v nastavení systému Android.
   provoz" vytvoří po vašem potvrzení **veřejnou anonymní poznámku** trvale
   dohledatelnou na openstreetmap.org (obsahuje název a souřadnice místa),
   aby mapu opravili dobrovolníci OpenStreetMap.
+- **Plán výletu po cestách (Mapy.com):** když uložíte plán se dvěma
+  a více zastávkami, odešlou se **souřadnice zastávek plánu** přes náš
+  server službě Mapy.com (Seznam.cz, a.s.) k výpočtu trasy po cestách.
+  Posílají se jen body plánu, nikdy vaše poloha ani jméno; služba má
+  vlastní zásady (https://www.seznam.cz/ochrana-udaju). Bez přihlášení
+  nebo bez sítě zůstane plán vzdušnou čarou a nic se neodesílá.
 - **Sdílení:** obsah (např. karta výpravy) předáte přes systémovou nabídku
   tam, kam sami zvolíte.
 
