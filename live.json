@@ -58,5 +58,18 @@
     "mobelix": "https://www.kupi.cz/letaky/mobelix",
     "xxxlutz": "https://www.kupi.cz/letaky/xxxlutz",
     "okay": "https://www.kupi.cz/letaky/okay"
+  },
+  "data": {
+    "verze": 202609022314,
+    "schema": 1,
+    "minApp": "1.600.0",
+    "vytvoreno": "2026-09-02",
+    "mist": 498698,
+    "db": {
+      "url": "https://github.com/stanislavmudra-hue/Sarcher-data/releases/download/data-v1/sarcher-202609022314.db.gz",
+      "sha256": "611fe60580079ad6c658226c044ebf2301a3a1d8c7b765d082d59d4c6f0e73b8",
+      "velikost": 34070229,
+      "velikostRozbalene": 97390592
+    }
   }
 }
