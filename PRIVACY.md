@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 29. 8. 2026*
+*Platné od 2. 9. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -222,11 +222,24 @@ ještě podle **radarových snímků služby RainViewer**. Stahuje se seznam
 dostupných snímků a obrázkové dlaždice radaru; jde o běžné stažení obsahu,
 vaše poloha se neodesílá.
 
-## Nákupy v aplikaci
+## Nákupy v aplikaci a objednávky firem
 
-Prémiové funkce lze zakoupit přes **Google Play**. Platbu zpracovává výhradně
+Prémiové funkce (předplatné Okolník Premium, zvýraznění podniku, vlastní
+místo na mapě) lze zakoupit přes **Google Play**. Platbu zpracovává výhradně
 Google – správce nemá přístup k údajům o platební kartě a od Googlu obdrží
-pouze informaci, zda je nákup aktivní.
+pouze informaci, zda je nákup aktivní, a token nákupu (ten se u žádosti
+o zvýraznění podniku nebo o vlastní místo uloží do Firestore, dokud správce
+žádost nevyřídí; slouží ke kontrole platby a případnému vrácení peněz).
+
+Máte-li přihlášený účet, aplikace k němu zapíše příznak, zda je Premium
+aktivní (bez částek a údajů o platbě). Podle něj web okolnik.cz skryje
+reklamy a povolí zakládání soutěží v Dobyvateli.
+
+**Objednávka pro firmy na webu (okolnik.cz/firmy):** při objednávce
+zvýraznění na fakturu uložíme název a adresu podniku, kategorii, kontaktní
+e‑mail nebo telefon, IČO a text, který chcete zobrazit. Údaje slouží jen
+k vyřízení objednávky, vystavení faktury a zobrazení schváleného obsahu
+v aplikaci; po vyřízení se objednávka z databáze maže.
 
 ## Komu údaje předáváme
 
