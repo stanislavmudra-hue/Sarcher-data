@@ -60,14 +60,14 @@
     "okay": "https://www.kupi.cz/letaky/okay"
   },
   "data": {
-    "verze": 202609151648,
+    "verze": 202609151716,
     "schema": 1,
     "minApp": "1.600.0",
     "vytvoreno": "2026-09-15",
     "mist": 577752,
     "db": {
-      "url": "https://github.com/stanislavmudra-hue/Sarcher-data/releases/download/data-v1/sarcher-202609151648.db.gz",
-      "sha256": "ba6c3c1b9d53fa5d712732b098269189757af5478e15230e90d35270f8d8a33f",
+      "url": "https://github.com/stanislavmudra-hue/Sarcher-data/releases/download/data-v1/sarcher-202609151716.db.gz",
+      "sha256": "b51689306b7ac2fc0f7d504f10ddb9e2c9936fb2052f98eb72f5c9dbf34463a9",
       "velikost": 38932105,
       "velikostRozbalene": 115965952
     }
