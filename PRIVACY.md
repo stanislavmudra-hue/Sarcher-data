@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 2. 9. 2026*
+*Platné od 5. 9. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -14,8 +14,11 @@ s vaší osobou** a nemá vlastní servery pro vaše data. Volitelně si můžet
 zapnout **žebříček na okolnik.cz** nebo hrát **týmovou hru Dobyvatel** –
 obojí vyžaduje přihlášení (Google, nebo e-mail a heslo) a teprve tím
 začne aplikace odesílat herní údaje popsané níže; výchozí stav je
-vypnuto a dá se kdykoli zrušit. Poloha, trasa, deník, výpravy
-i fotky zůstávají uložené jen ve vašem telefonu. Na server správce posíláte
+vypnuto a dá se kdykoli zrušit. Poloha, přesná trasa a fotky zůstávají
+uložené jen ve vašem telefonu; po přihlášení se **postup ve hře** (odkrytá
+mapa, kilometry, deník a výpravy bez fotek, úspěchy, plány) ukládá i pod
+vaším účtem, aby přežil výměnu telefonu a šel zobrazit na okolnik.cz –
+jen pro vás, nikdy veřejně. Na server správce posíláte
 to, co sami odešlete (návrh místa, hlasování, zpětná vazba) – bez jména či
 e-mailu; aplikace navíc odesílá **souhrnné statistiky používání**
 (lze vypnout v nastavení). Některé funkce se dotazují veřejných služeb
@@ -27,7 +30,9 @@ reklamy Google AdMob, které v EU vyžadují váš souhlas.
 
 Aplikace používá polohu zařízení (GPS) k zobrazení vaší pozice a míst
 v okolí na mapě a v seznamu a k hernímu „vybarvování" navštívených oblastí.
-**Poloha se zpracovává ve vašem zařízení** a neukládá se na servery správce.
+**Poloha se zpracovává ve vašem zařízení** a neukládá se na servery správce;
+jedinou výjimkou je hrubá odkrytá mapa (buňky o velikosti stovek metrů)
+ukládaná po přihlášení pod vaším účtem, viz „Postup ve hře pod účtem".
 Některé funkce ale potřebují poslat přibližnou polohu veřejné službě třetí
 strany, aby fungovaly: načtení mapových dlaždic, načtení veřejných poznámek
 OpenStreetMap v hrubém okolí (~±30 km) kolem vás a načtení popisku
@@ -49,7 +54,10 @@ U nádraží a zastávek lze obdobně otevřít odjezdovou tabuli ve službě
 
 Zaznamenaná trasa a „objevené" oblasti, turistický deník a výpravy (zápisy,
 poznámky, fotografie), vlastní a oblíbená místa, úspěchy i nastavení se
-ukládají **pouze lokálně ve vašem zařízení** a nikam se neodesílají. Smažete
+ukládají **ve vašem zařízení**. Bez přihlášení se nikam neodesílají; po
+přihlášení se jejich část ukládá i pod vaším účtem (viz „Postup ve hře pod
+účtem"). Přesná trasa (jednotlivé body polohy), fotografie a nastavení
+zůstávají vždy jen v telefonu. Smažete
 je v aplikaci, vymazáním dat aplikace nebo její odinstalací. Systém Android
 může data aplikace zálohovat do vašeho účtu Google (lze vypnout v nastavení
 telefonu); aplikace navíc umí ruční export zálohy (ZIP).
@@ -112,9 +120,11 @@ platí navíc toto:
   **přezdívka**, počet ušlých kilometrů, počet nových obcí a počet
   fotovýprav za aktuální měsíc, případně kraj, pokud si ho zvolíte.
   Přezdívku si volíte sami – nemusí to být vaše jméno.
-- **Co se neodesílá nikdy.** Vaše poloha, trasa, deník, fotky, seznam
-  navštívených míst ani e-mail. Z těchto dat vznikají jen výše uvedená
-  souhrnná čísla, která se počítají přímo v telefonu.
+- **Co je a co není veřejné.** Veřejná jsou jen výše uvedená souhrnná
+  čísla pod přezdívkou; počítají se přímo v telefonu. Vaše poloha,
+  přesná trasa, fotky ani e-mail se do žebříčku neposílají. Deník,
+  navštívená místa a odkrytá mapa se ukládají jen soukromě pod vaším
+  účtem (viz „Postup ve hře pod účtem"), nikdy veřejně.
 - **Identita hráče.** Výsledky jsou svázané s vaším přihlášeným
   účtem. Navenek vystupujete jen pod zvolenou přezdívkou a náhodným
   kódem účtu, který podle GDPR považujeme za pseudonymizovaný údaj
@@ -127,7 +137,8 @@ platí navíc toto:
   Souhlas můžete kdykoli odvolat v nastavení Androidu.
 - **Stejný účet na webu.** Na okolnik.cz/ucet se přihlásíte tímtéž
   účtem jako v aplikaci a uvidíte svůj **soukromý profil** (úroveň,
-  souhrnná čísla, úspěchy); ten je čitelný jen pro vás, ne veřejně.
+  souhrnná čísla, úspěchy) a od verze 1.608 i **svou mapu** (odkrytá
+  místa, fotovýpravy, zápisy); obojí je čitelné jen pro vás, ne veřejně.
 - **Odhlášení.** Vypnutím přepínače v „Můj Okolník“ se váš řádek
   z žebříčku smaže a další čísla se už neposílají. O smazání profilu
   i spárování lze kdykoli požádat na stamu.apps@gmail.com.
@@ -154,6 +165,88 @@ Když ho hrajete, platí toto:
   lhůty změnit.
 - **Konec účasti.** Hru kdykoli opustíte přepnutím režimu; o smazání
   herních dat účtu lze požádat na stamu.apps@gmail.com.
+
+## Postup ve hře pod účtem (synchronizace)
+
+Od verze 1.608 aplikace po přihlášení ukládá váš **postup ve hře** pod váš
+účet do databáze správce (Google Firebase / Firestore), aby přežil výměnu
+nebo ztrátu telefonu a abyste ho viděli i na okolnik.cz. Synchronizace je
+součástí přihlášeného účtu – kdo se nepřihlásí, neposílá nic a hra běží
+jen v telefonu.
+
+- **Co se ukládá.** Odkryté oblasti mapy (mřížka buněk o velikosti zhruba
+  200 × 130 m, kterými jste prošli), dokončené obce a denní kilometry,
+  zápisy deníku a fotovýpravy **bez fotografií** (u výprav včetně
+  zaznamenané trasy výpravy a časů), soukromá a oblíbená místa, poznámky
+  k místům, hlasy o aktuálnosti míst, úspěchy a časy jejich získání, časy
+  objevení míst a doložené návštěvy, plány v kalendáři.
+- **Co se neukládá.** Fotografie, přesná průběžná trasa („trasa dne"),
+  aktuální poloha, kroky ani nastavení. Poloha se ani tady neodesílá
+  průběžně – odchází jen souhrn po skončení aktivity nebo při odchodu
+  z aplikace, ručně pak tlačítkem v „Můj Okolník".
+- **Kdo to vidí.** Jen vy: data jsou svázaná s vaším účtem a čitelná
+  pouze po přihlášení tímtéž účtem (v aplikaci i na okolnik.cz). Nejsou
+  veřejná, nepředáváme je a nepoužíváme je k reklamě ani k profilování.
+  Správce má k databázi technický přístup kvůli provozu a podpoře.
+- **Proč to bereme vážně.** Odkrytá mapa je hrubý obraz míst, kde jste
+  se pohybovali, tedy údaj o poloze. Proto se ukládá jen pod účtem,
+  v hrubém rozlišení stovek metrů, šifrovaně při přenosu i v úložišti
+  Googlu, a smažete ho kdykoli.
+- **Kdy se odesílá.** Po přihlášení, po skončení aktivity či při odchodu
+  z aplikace a ručně („Více → Můj Okolník → Synchronizovat teď"). Při
+  přihlášení na novém telefonu se stav ze serveru sloučí s tím v telefonu
+  – nic se nepřepisuje ani nemaže. Účet je aktivní vždy jen na jednom
+  telefonu: jiný telefon ho převezme po odhlášení na tom prvním, nebo
+  když je první telefon den v klidu; čísla do žebříčku posílá jen
+  aktivní telefon. Počet takových převzetí za měsíc se ukládá
+  u hlavičky (ochrana žebříčku před sdílením účtu).
+- **Smazání.** Smazáním účtu v aplikaci („Smazat účet a data ze serveru")
+  nebo přes okolnik.cz/smazani-uctu se smaže i uložený postup. Data
+  v telefonu tím nezmizí.
+- **Právní základ.** Plnění smlouvy – poskytnutí funkce, kterou
+  přihlášením využíváte (čl. 6 odst. 1 písm. b GDPR).
+
+## Přátelé (dobrovolné)
+
+Od verze 1.613.50 si přihlášení hráči mohou přidat **přátele**. Funkce je
+zcela dobrovolná: kdo nikoho nepřidá, nesdílí nic.
+
+- **Jak se přátelství uzavírá.** Každý přihlášený účet má šestimístný kód
+  (odvozený z účtu, bez osobních údajů). Kdo kód zadá, pošle žádost; přátelé
+  jste až po jejím přijetí druhou stranou. Kód i žádost nesou jen vaši
+  přezdívku ze žebříčku (nebo slovo „Okolník", pokud přezdívku nemáte).
+- **Co přátelé vidí automaticky.** Přezdívku, počet objevených obcí,
+  nachozené kilometry, úroveň, počet fotovýprav a název poslední z nich
+  názvy, data a délky posledních pěti z nich a **seznam objevených obcí** –
+  na mapě přítele se ukazují jako barevně podbarvená území („společná
+  mapa"). Neposílá se odkrytá mřížka buněk,
+  trasy, zápisy deníku, fotografie ani doložené návštěvy.
+- **Poloha.** Vaši aktuální polohu vidí přátelé **po dobu trvání
+  přátelství** – tedy až po vzájemném potvrzení a jen dokud spojení sami
+  nepřerušíte: jedním vypínačem pro všechny („Sdílet polohu s přáteli")
+  nebo vypínačem u jednotlivého přítele. Poloha se odesílá, kdykoli
+  aplikace zaznamenává polohu (v popředí i při zapnutém záznamu aktivity),
+  nejvýš jednou za minutu a po posunu aspoň o 30 metrů, zaokrouhlená na
+  metry, spolu s přesností a časem. Záznam na serveru platí nejvýš den
+  a s každým odesláním se obnovuje; po přerušení sdílení se smaže. Přítel
+  vidí polohu starou nejvýš 24 hodin (na mapě po 30 minutách zbledne).
+- **Historie v telefonu.** Po odebrání přítele zůstane jen ve vašem
+  telefonu záznam o tom, kdo a odkdy dokdy byl vaším přítelem, jeho
+  poslední souhrn a názvy jeho posledních fotovýprav („vzpomínky") a
+  poznámka v deníku. Na server se nic z toho neukládá; v aplikaci to jde
+  smazat po jednom i celé.
+- **Kde to je uloženo.** V databázi správce (Google Firebase / Firestore,
+  servery v EU), ve třech malých záznamech svázaných s účtem: kód
+  (`kody`), přátelství (`pratelstvi`), sdílený souhrn s obcemi
+  (`sdileni`) a poloha (`poloha`). Pravidla databáze pouštějí ke čtení
+  souhrnu jen potvrzené přátele a k poloze jen ty, komu jste ji zapnuli.
+- **Odebrání a smazání.** Odebráním přítele (nebo odmítnutím žádosti)
+  zmizí přátelství na obou stranách a s ním i přístup k souhrnu a poloze.
+  Smazáním účtu se smažou všechny tyto záznamy.
+- **Právní základ.** Souhlas – sdílení zapínáte vy sami, přátelství
+  přijímáte výslovně a polohu zapínáte pro každého přítele zvlášť
+  (čl. 6 odst. 1 písm. a GDPR); souhlas kdykoli odvoláte odebráním přítele
+  nebo vypnutím polohy.
 
 ## Záloha do účtu Google (služba Androidu)
 
@@ -212,10 +305,12 @@ poskytovateli se předá jen běžný síťový požadavek (IP adresa), žádné
 osobní údaje.
 
 **Počasí:** pro atmosférické efekty v Objevování (mraky, mlha) stahuje
-aplikace aktuální počasí ze služby **Open-Meteo**. Dotaz obsahuje **pevný
-seznam bodů** rozmístěných po ČR, stejný pro všechny uživatele – vaše poloha
-ani výřez mapy se neodesílají. Počasí pro vaše okolí se vybere z už
-stažených dat přímo v telefonu.
+aplikace aktuální počasí z **našeho serveru** (Google Cloud Functions,
+region EU), který je jednou za 15 minut přebírá ze služby **MET Norway**
+(api.met.no, licence CC BY 4.0) pro **pevný seznam bodů** rozmístěných po
+ČR, stejný pro všechny uživatele – vaše poloha ani výřez mapy se
+neodesílají. Počasí pro vaše okolí se vybere z už stažených dat přímo
+v telefonu.
 
 **Srážkový radar:** protože předpověď se občas mýlí, ověřuje aplikace déšť
 ještě podle **radarových snímků služby RainViewer**. Stahuje se seznam
@@ -241,7 +336,7 @@ reklamy a povolí zakládání soutěží v Dobyvateli.
 Údaje nikomu neprodáváme. Příjemci / poskytovateli služeb jsou:
 
 - **Google** – AdMob (reklamy), Firebase/Firestore (návrhy, hlasy, zpětná
-  vazba, souhrnné statistiky, žebříček), Firebase Auth (anonymní identita
+  vazba, souhrnné statistiky, žebříček, postup ve hře pod účtem), Firebase Auth (anonymní identita
   hráče a přihlášení účtem Google na webu), Google Play (nákupy
   a distribuce).
 - **OpenStreetMap** – mapové dlaždice a komunitní poznámky (načítání
@@ -250,8 +345,8 @@ reklamy a povolí zakládání soutěží v Dobyvateli.
   snímky).
 - **Wikimedia / Wikipedia** – popisek zobrazovaného místa.
 - **GitHub** (Microsoft) – stažení datového kanálu.
-- **Open-Meteo** – aktuální počasí pro pevné body v ČR (bez odeslání vaší
-  polohy).
+- **MET Norway** (přes náš server) – aktuální počasí pro pevné body v ČR
+  (bez odeslání vaší polohy).
 - **RainViewer** – snímky srážkového radaru (bez odeslání vaší polohy).
 - **Navigační služby dle vaší volby** – Google Mapy, Mapy.com / Seznam.cz,
   Waze (jen když spustíte navigaci).
@@ -293,15 +388,15 @@ propojíte hru s webem — hra samotná ho nepotřebuje.
 **Smazat ho jde dvěma způsoby:**
 
 - **v aplikaci:** *Více → Můj Okolník → Smazat účet a data ze serveru*.
-  Zmizí řádek v žebříčku za **všechna období**, profil pro web
-  i anonymní identita hráče.
+  Zmizí řádek v žebříčku za **všechna období**, profil pro web,
+  uložený postup ve hře i identita hráče.
 - **bez aplikace:** na stránce
   [okolnik.cz/smazani-uctu](https://okolnik.cz/smazani-uctu/), kde je
   i adresa pro žádost e-mailem. Žádost vyřídíme nejpozději do 30 dnů.
 
-Data ve hře — odkrytá mapa, ušlé kilometry, deník, výpravy a fotky —
-smazáním účtu **nezmizí**, protože na serveru nikdy nebyla. Odstraníte
-je vymazáním dat aplikace nebo její odinstalací.
+Data v telefonu — odkrytá mapa, ušlé kilometry, deník, výpravy a fotky —
+smazáním účtu **nezmizí**; smaže se jen jejich kopie uložená pod účtem.
+Z telefonu je odstraníte vymazáním dat aplikace nebo její odinstalací.
 
 ## Vaše práva
 
