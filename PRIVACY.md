@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 5. 9. 2026*
+*Platné od 25. 9. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -273,6 +273,12 @@ počítadla („dnes +1"); neodesílá se žádné jméno, identifikátor, poloh
 obsah, takže je nelze přiřadit ke konkrétní osobě. Sběr lze kdykoli vypnout
 v nastavení aplikace (přepínač „Anonymní statistiky používání").
 
+Stejně souhrnně aplikace počítá návštěvnost **stránek ověřených podniků**:
+otevření stránky a klepnutí na Trasa, Volat, Web a Sdílet se připočtou k měsíčnímu počítadlu
+podniku („září +1“, z jednoho telefonu nejvýš jednou denně). Neodesílá se žádný identifikátor
+zařízení ani účtu a majitel podniku vidí jen měsíční součty. I tyto počty vypíná přepínač
+„Anonymní statistiky používání“.
+
 ## Hlášení chyb a pádů
 
 Když aplikace spadne nebo přestane reagovat, vytvoří o tom technický záznam
@@ -325,6 +331,11 @@ Google – správce nemá přístup k údajům o platební kartě a od Googlu ob
 pouze informaci, zda je nákup aktivní, a token nákupu (ten se u žádosti
 o zvýraznění podniku nebo o vlastní místo uloží do Firestore, dokud správce
 žádost nevyřídí; slouží ke kontrole platby a případnému vrácení peněz).
+
+Objednávka zvýraznění podniku se váže na **přihlášený účet**: k žádosti se uloží
+identifikátor účtu a číslo objednávky Google Play, aby majitel mohl na okolnik.cz/firmy spravovat
+stránku podniku. Co na stránku podniku zadá (otevírací doba, kontakty, texty, fotky), je veřejné
+a vidí to všichni uživatelé; texty a fotky před zveřejněním schvaluje správce.
 
 Máte-li přihlášený účet, aplikace k němu zapíše příznak, zda je Premium
 aktivní (bez částek a údajů o platbě). Podle něj web okolnik.cz skryje
