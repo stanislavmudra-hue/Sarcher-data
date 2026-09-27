@@ -163,6 +163,12 @@ Když ho hrajete, platí toto:
 - **Členství v týmu.** U vašeho účtu se ukládá zvolený tým (kraj)
   a případná účast ve vlastní soutěži. Tým jde po uplynutí ochranné
   lhůty změnit.
+- **Logo týmu (vlastní soutěže).** Tým si může vybrat znak z nabídky nebo
+  nahrát vlastní obrázek. Nahraný obrázek se zmenší na čtverec 192 px, uloží
+  se na server hry spolu s pseudonymním kódem autora a vidí ho všichni hráči
+  a diváci té soutěže. Změnit nebo smazat ho smí člen týmu, organizátor
+  soutěže může nevhodné logo smazat. Nahrávejte jen obrázky, k nimž máte
+  práva a které nezobrazují jiné lidi.
 - **Konec účasti.** Hru kdykoli opustíte přepnutím režimu; o smazání
   herních dat účtu lze požádat na stamu.apps@gmail.com.
 
