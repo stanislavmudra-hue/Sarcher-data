@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 25. 9. 2026*
+*Platné od 11. 10. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -36,7 +36,11 @@ ukládaná po přihlášení pod vaším účtem, viz „Postup ve hře pod úč
 Některé funkce ale potřebují poslat přibližnou polohu veřejné službě třetí
 strany, aby fungovaly: načtení mapových dlaždic, načtení veřejných poznámek
 OpenStreetMap v hrubém okolí (~±30 km) kolem vás a načtení popisku
-zobrazovaného místa z Wikipedie.
+zobrazovaného místa z Wikipedie. Mapové podklady (vektorová mapa, terén,
+výškopis, drobnosti na mapě) se stahují po dlaždicích právě zobrazeného
+výřezu z úložiště **Cloudflare R2**, letecké snímky z **ČÚZK** a styl
+„Základní“ ze služby **OpenFreeMap** – poskytovatel tak vidí IP adresu
+a přibližnou oblast, kterou si na mapě prohlížíte (ne vaši polohu z GPS).
 
 Volitelně lze v nastavení zapnout **zaznamenávání trasy na pozadí** (např.
 při zhasnutém displeji). Funkce je ve výchozím stavu vypnutá, běží jako
@@ -93,8 +97,10 @@ resetovat reklamní ID v nastavení systému Android.
   Posílají se jen body plánu, nikdy vaše poloha ani jméno; služba má
   vlastní zásady (https://www.seznam.cz/ochrana-udaju). Bez přihlášení
   nebo bez sítě zůstane plán vzdušnou čarou a nic se neodesílá.
-- **Sdílení:** obsah (např. karta výpravy) předáte přes systémovou nabídku
-  tam, kam sami zvolíte.
+- **Sdílení:** obsah (např. karta výpravy nebo fotka) předáte přes systémovou
+  nabídku tam, kam sami zvolíte. Fotka se sdílí jako původní soubor – i s údaji,
+  které do ní uložil fotoaparát (datum a čas, u fotek z fotoaparátu telefonu
+  případně i polohu, pokud ji tam fotoaparát zapsal).
 
 
 **Co je identifikátor instalace.** Náhodně vygenerovaný kód, který vznikne
@@ -141,7 +147,7 @@ platí navíc toto:
   místa, fotovýpravy, zápisy); obojí je čitelné jen pro vás, ne veřejně.
 - **Odhlášení.** Vypnutím přepínače v „Můj Okolník“ se váš řádek
   z žebříčku smaže a další čísla se už neposílají. O smazání profilu
-  i spárování lze kdykoli požádat na stamu.apps@gmail.com.
+  lze kdykoli požádat na stamu.apps@gmail.com.
 
 ## Hra Dobyvatel a soutěže (dobrovolné)
 
@@ -211,7 +217,9 @@ jen v telefonu.
   zápisy deníku a fotovýpravy **bez fotografií** (u výprav včetně
   zaznamenané trasy výpravy a časů), soukromá a oblíbená místa, poznámky
   k místům, hlasy o aktuálnosti míst, úspěchy a časy jejich získání, časy
-  objevení míst a doložené návštěvy, plány v kalendáři.
+  objevení míst a doložené návštěvy, plány v kalendáři a zvolený režim hry
+  (Cestovatel, Objevitel, nebo Dobyvatel), aby mapa na webu začala ve stejném
+  režimu jako aplikace.
 - **Co se neukládá.** Fotografie, přesná průběžná trasa („trasa dne"),
   aktuální poloha, kroky ani nastavení. Poloha se ani tady neodesílá
   průběžně – odchází jen souhrn po skončení aktivity nebo při odchodu
@@ -374,14 +382,30 @@ aktivní (bez částek a údajů o platbě). Podle něj web okolnik.cz skryje
 reklamy a povolí zakládání soutěží v Dobyvateli.
 
 
+## Web okolnik.cz
+
+Web nepoužívá reklamní ani sledovací cookies a žádnou analytiku. V úložišti
+vašeho prohlížeče (localStorage) si pamatuje přihlášení k účtu, nastavení mapy
+a stav ukázkové mapy; nic z toho se neposílá třetím stranám. Mapa na webu
+stahuje podklady stejně jako aplikace (Cloudflare R2, ČÚZK, OpenFreeMap) a počasí
+z našeho serveru; po přihlášení čte váš postup ve hře přímo z databáze pod
+vaším účtem (viz „Postup ve hře pod účtem“). Web neodesílá vaši polohu – jen
+když sami klepnete na „Moje poloha“, zjistí ji prohlížeč (po vašem svolení)
+a použije ji jen k posunu mapy.
+
 ## Komu údaje předáváme
 
 Údaje nikomu neprodáváme. Příjemci / poskytovateli služeb jsou:
 
 - **Google** – AdMob (reklamy), Firebase/Firestore (návrhy, hlasy, zpětná
-  vazba, souhrnné statistiky, žebříček, postup ve hře pod účtem), Firebase Auth (anonymní identita
-  hráče a přihlášení účtem Google na webu), Google Play (nákupy
+  vazba, souhrnné statistiky, žebříček, postup ve hře pod účtem), Firebase
+  Authentication (přihlášení účtem Google nebo e-mailem v aplikaci i na webu),
+  Cloud Functions v EU (počasí, výpočet trasy plánu), Google Play (nákupy
   a distribuce).
+- **Cloudflare** – úložiště mapových podkladů (R2): vektorová mapa, terén,
+  výškopis a drobnosti na mapě; dostává požadavky na dlaždice zobrazeného výřezu.
+- **ČÚZK** – letecké snímky (Ortofoto ČR) a výškopis (DMR 5G).
+- **OpenFreeMap** – podklad stylu mapy „Základní“ (jen když ho zvolíte).
 - **OpenStreetMap** – mapové dlaždice a komunitní poznámky (načítání
   i veřejné hlášení zaniklých míst).
 - **OpenTopoMap** a **Esri** – mapové podklady (turistická mapa, letecké
@@ -427,8 +451,8 @@ celorepublikovým průměrem, nikoli cenou konkrétní čerpací stanice.
 
 ## Smazání účtu a dat
 
-Účet v Okolníku vzniká jen tehdy, když si sami zapnete žebříček nebo
-propojíte hru s webem — hra samotná ho nepotřebuje.
+Účet v Okolníku vzniká, jen když se v aplikaci nebo na webu sami přihlásíte
+(účtem Google, nebo e-mailem a heslem) — hra samotná ho nepotřebuje.
 
 **Smazat ho jde dvěma způsoby:**
 
