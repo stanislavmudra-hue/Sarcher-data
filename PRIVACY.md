@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 11. 10. 2026*
+*Platné od 14. 10. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -36,7 +36,11 @@ ukládaná po přihlášení pod vaším účtem, viz „Postup ve hře pod úč
 Některé funkce ale potřebují poslat přibližnou polohu veřejné službě třetí
 strany, aby fungovaly: načtení mapových dlaždic, načtení veřejných poznámek
 OpenStreetMap v hrubém okolí (~±30 km) kolem vás a načtení popisku
-zobrazovaného místa z Wikipedie. Mapové podklady (vektorová mapa, terén,
+zobrazovaného místa z Wikipedie. Informace o zobrazeném místě (popis, rok
+vzniku, památková ochrana a úvod článku z Wikidat a Wikipedie, které předem
+zpracováváme my) se stahují z našeho webu okolnik.cz po oblastech zhruba
+25 km podle polohy zobrazeného místa – hosting webu (GitHub Pages) tak vidí
+IP adresu a přibližnou oblast místa, které si prohlížíte. Mapové podklady (vektorová mapa, terén,
 výškopis, drobnosti na mapě) se stahují po dlaždicích právě zobrazeného
 výřezu z úložiště **Cloudflare R2**, letecké snímky z **ČÚZK** a styl
 „Základní“ ze služby **OpenFreeMap** – poskytovatel tak vidí IP adresu
@@ -411,7 +415,8 @@ a použije ji jen k posunu mapy.
 - **OpenTopoMap** a **Esri** – mapové podklady (turistická mapa, letecké
   snímky).
 - **Wikimedia / Wikipedia** – popisek zobrazovaného místa.
-- **GitHub** (Microsoft) – stažení datového kanálu.
+- **GitHub** (Microsoft) – stažení datového kanálu a hosting webu okolnik.cz,
+  odkud aplikace stahuje informace o zobrazeném místě (po oblastech zhruba 25 km).
 - **MET Norway** (přes náš server) – aktuální počasí pro pevné body v ČR
   (bez odeslání vaší polohy).
 - **RainViewer** – snímky srážkového radaru (bez odeslání vaší polohy).
