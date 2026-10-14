@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-14",
   "ads": {
     "enabled": true,
     "blockedManufacturers": []
@@ -32,10 +32,10 @@
     ]
   },
   "fuel": {
-    "week": "40. týden 2026",
-    "natural95": 45.87,
-    "diesel": 50.65,
-    "lpg": 21.62,
+    "week": "41. týden 2026",
+    "natural95": 45.16,
+    "diesel": 47.74,
+    "lpg": 21.75,
     "source": "ČSÚ"
   },
   "leaflets": {
