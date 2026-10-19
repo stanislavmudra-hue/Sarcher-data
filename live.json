@@ -71,5 +71,21 @@
       "velikost": 38932105,
       "velikostRozbalene": 115965952
     }
-  }
+  },
+  "hiddenPlaces": [
+    {
+      "id": "node/4019255704",
+      "kdy": "2026-10-01",
+      "name": "U Berušky",
+      "duvod": "z mapy správy"
+    },
+    {
+      "id": "node/4018126589",
+      "kdy": "2026-10-01",
+      "name": "U Berušky",
+      "duvod": "z mapy správy"
+    }
+  ],
+  "placePhotos": {},
+  "placeInfo": {}
 }
