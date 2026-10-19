@@ -1,6 +1,6 @@
 # Zásady ochrany soukromí – aplikace Okolník
 
-*Platné od 14. 10. 2026*
+*Platné od 19. 10. 2026*
 
 Aplikace **Okolník – vyhledávač míst v okolí** (dále „aplikace") respektuje
 vaše soukromí. Tento dokument popisuje, jaké údaje aplikace zpracovává, proč
@@ -255,20 +255,27 @@ jen v telefonu.
 Od verze 1.613.50 si přihlášení hráči mohou přidat **přátele**. Funkce je
 zcela dobrovolná: kdo nikoho nepřidá, nesdílí nic.
 
-- **Jak se přátelství uzavírá.** Každý přihlášený účet má šestimístný kód
-  (odvozený z účtu, bez osobních údajů). Kdo kód zadá, pošle žádost; přátelé
-  jste až po jejím přijetí druhou stranou. Kód i žádost nesou jen vaši
-  přezdívku ze žebříčku (nebo slovo „Okolník", pokud přezdívku nemáte).
-- **Co přátelé vidí automaticky.** Přezdívku, počet objevených obcí,
-  nachozené kilometry, úroveň, počet fotovýprav a název poslední z nich
-  názvy, data a délky posledních pěti z nich a **seznam objevených obcí** –
-  na mapě přítele se ukazují jako barevně podbarvená území („společná
-  mapa"). Neposílá se odkrytá mřížka buněk,
+- **Jak se přátelství uzavírá.** Každý přihlášený účet má kód přítele
+  o 12 náhodných znacích (od verze 1.613.294; dřív šestimístný), který
+  s osobními údaji nijak nesouvisí a jde kdykoli vyměnit za nový (starý pak
+  přestane platit). Kdo kód zadá, pošle žádost; přátelé jste až po jejím
+  přijetí druhou stranou. Kód i žádost nesou jen vaši přezdívku ze žebříčku
+  (nebo slovo „Okolník", pokud přezdívku nemáte).
+- **Co přátelé vidí – nastavujete sami.** Sdílení má pět částí, které
+  zapínáte a vypínáte u každého přítele zvlášť (výchozí volbu pro nové
+  přátele nastavíte v aplikaci): **poloha**, **objevené území** (seznam
+  objevených obcí – na mapě přítele barevně podbarvená území), **souhrn**
+  (počet objevených obcí, kilometry, úroveň, počet výletů), **výlety**
+  (názvy, data a délky posledních pěti) a **stav** (že právě jste na výletě,
+  s jeho názvem, délkou a časem začátku; kdy jste byli naposledy aktivní
+  v aplikaci; a krátký text, který si sami napíšete). Platí vzájemnost:
+  co s přítelem nesdílíte vy, neuvidíte ani u něj – hlídají to pravidla
+  databáze. Přezdívku vidí přítel vždy. Neposílá se odkrytá mřížka buněk,
   trasy, zápisy deníku, fotografie ani doložené návštěvy.
-- **Poloha.** Vaši aktuální polohu vidí přátelé **po dobu trvání
-  přátelství** – tedy až po vzájemném potvrzení a jen dokud spojení sami
-  nepřerušíte: jedním vypínačem pro všechny („Sdílet polohu s přáteli")
-  nebo vypínačem u jednotlivého přítele. Poloha se odesílá, kdykoli
+- **Poloha.** Vaši aktuální polohu vidí přátelé, se kterými ji sdílíte,
+  **po dobu trvání přátelství** – tedy až po vzájemném potvrzení a jen
+  dokud spojení sami nepřerušíte: jedním vypínačem pro všechny („Sdílet
+  polohu s přáteli") nebo u jednotlivého přítele. Poloha se odesílá, kdykoli
   aplikace zaznamenává polohu (v popředí i při zapnutém záznamu aktivity),
   nejvýš jednou za minutu a po posunu aspoň o 30 metrů, zaokrouhlená na
   metry, spolu s přesností a časem. Záznam na serveru platí nejvýš den
@@ -280,17 +287,21 @@ zcela dobrovolná: kdo nikoho nepřidá, nesdílí nic.
   poznámka v deníku. Na server se nic z toho neukládá; v aplikaci to jde
   smazat po jednom i celé.
 - **Kde to je uloženo.** V databázi správce (Google Firebase / Firestore,
-  servery v EU), ve třech malých záznamech svázaných s účtem: kód
-  (`kody`), přátelství (`pratelstvi`), sdílený souhrn s obcemi
-  (`sdileni`) a poloha (`poloha`). Pravidla databáze pouštějí ke čtení
-  souhrnu jen potvrzené přátele a k poloze jen ty, komu jste ji zapnuli.
+  servery v EU), v malých záznamech svázaných s účtem: kód (`kody`),
+  přátelství (`pratelstvi`), komu co sdílíte (`pratele_nastaveni` – čtete
+  jen vy), souhrn (`sdileni`), objevené území (`uzemi`), výlety
+  (`vylety_pratel`), stav (`stav_pratel`) a poloha (`poloha`). Pravidla
+  databáze pouštějí ke každé části jen potvrzené přátele, se kterými ji
+  sdílíte a kteří ji sdílejí s vámi.
 - **Odebrání a smazání.** Odebráním přítele (nebo odmítnutím žádosti)
-  zmizí přátelství na obou stranách a s ním i přístup k souhrnu a poloze.
-  Smazáním účtu se smažou všechny tyto záznamy.
+  zmizí přátelství na obou stranách a s ním i přístup ke všemu sdílenému.
+  Vypnutím části sdílení se její záznam pro daného přítele uzavře (a když
+  ji nesdílíte s nikým, smaže se). Smazáním účtu se smažou všechny tyto
+  záznamy.
 - **Právní základ.** Souhlas – sdílení zapínáte vy sami, přátelství
-  přijímáte výslovně a polohu zapínáte pro každého přítele zvlášť
-  (čl. 6 odst. 1 písm. a GDPR); souhlas kdykoli odvoláte odebráním přítele
-  nebo vypnutím polohy.
+  přijímáte výslovně a každou část sdílení nastavujete pro každého přítele
+  zvlášť (čl. 6 odst. 1 písm. a GDPR); souhlas kdykoli odvoláte vypnutím
+  části sdílení nebo odebráním přítele.
 
 ## Záloha do účtu Google (služba Androidu)
 
@@ -393,9 +404,12 @@ vašeho prohlížeče (localStorage) si pamatuje přihlášení k účtu, nastav
 a stav ukázkové mapy; nic z toho se neposílá třetím stranám. Mapa na webu
 stahuje podklady stejně jako aplikace (Cloudflare R2, ČÚZK, OpenFreeMap) a počasí
 z našeho serveru; po přihlášení čte váš postup ve hře přímo z databáze pod
-vaším účtem (viz „Postup ve hře pod účtem“). Web neodesílá vaši polohu – jen
-když sami klepnete na „Moje poloha“, zjistí ji prohlížeč (po vašem svolení)
-a použije ji jen k posunu mapy.
+vaším účtem (viz „Postup ve hře pod účtem“). Polohu zařízení (GPS) web
+nepoužívá – ta je jen v aplikaci. Když mapu otevřete bez zadaného místa, náš
+server u Cloudflare (data.okolnik.cz) zjistí z IP adresy vašeho požadavku
+přibližné místo (obvykle město – Cloudflare ho zná u každého požadavku) a mapa
+začne tam. Tato přibližná poloha se nikam neukládá ani nezapisuje a slouží jen
+k posunu mapy.
 
 ## Komu údaje předáváme
 
